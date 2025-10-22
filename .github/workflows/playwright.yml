@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      VITE_PLAYWRIGHT_TOKEN: ${{ secrets.VITE_PLAYWRIGHT_TOKEN }}
+      VITE_BASE_URL_STAGING: ${{ secrets.VITE_BASE_URL_STAGING }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
